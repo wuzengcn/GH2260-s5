@@ -1,35 +1,32 @@
 ---
 format:
   revealjs:
-    theme: styles.scss
+    theme: styles1.scss
     transition: fade
     slide-number: true
     wide: true
     chalkboard: true
-    margin: 0.1
+    margin: 0.05
     footer: "Introduction to Health Economics | Fall 2026 | Session 5"
     controls: true
+    center: true
 ---
 
-::: {.title-slide}
+::::{.layout="[90,10]"}
+:::{first}
 
-# Economic evaluation in Healthcare
+[Session 5]{.kicker}
 
-<br>
+<div class="rule"></div>
 
-Wu Zeng, MD, PHD
+<p class="h1">Economic evaluation in Healthcare</p>
 
-<br>
-
-Department of Global Health 
-
-Georgetown University
-
-<br>
-
-[Claimer]{.themec}: I declare no conflict of interest
-
+[Wu Zeng, MD, PHD, Georgetown University]{.label}
 :::
+:::{second}
+<!-- nothing -->
+:::
+::::
 
 ---
 ```{r setup, include=FALSE}
@@ -43,35 +40,53 @@ library(DiagrammeR)
 library(widgetframe)
 ```
 
-## Outline 
+::::{.slide-list}
+:::{.list-header}
 
+[Outline]{.kicker}
+
+<div class="rule"></div>
+
+<p class="h2">Outline of the session</p>
+
+:::
+:::{.list-body}
 - What is economic evaluation?
 - Why is it important in healthcare?
 - Type of economics evaluation
-    - cost-of-illness studies
-    - cost-benefit analysis 
-    - cost-effectiveness analysis
+  - cost-of-illness studies
+  - cost-benefit analysis 
+  - cost-effectiveness analysis
 - Approaches to perform a cost-effectiveness analysis
   - Decision tree model
   - Markov model
+:::
+::::
 
 ---
 
 ## What is economic evaluation?
 
-- Economic evaluation is a [comparative]{.themec} analysis of [alternative courses]{.themec} of action in terms of both their [costs]{.themec} and [consequences]{.themec}.
+::::{.two-col-grid}
+:::{.grid-item}
 
-  - Definition: Drugs and other technologies are assessed for use and/or for a reimbursement price by looking at [incremental health-related effects]{.themec} and [costs]{.themec} relative to [existing treatments]{.themec}. 
+Economic evaluation is a [comparative]{.emcolor} analysis of [alternative courses]{.emcolor} of action in terms of both their [costs]{.emcolor} and [consequences]{.emcolor}.
 
-- It is a tool to help decision-makers allocate scarce resources [efficiently]{.themec} to maximize [health benefits]{.themec} within the [budget]{.themec}.
+- Definition: Drugs and other technologies are assessed for use and/or for a reimbursement price by looking at [incremental health-related effects]{.emcolor} and [costs]{.emcolor} relative to [existing treatments]{.emcolor}. 
+:::
+:::{.grid-item}
 
-  - Budget constraints
+It is a tool to help decision-makers allocate scarce resources [efficiently]{.emcolor} to maximize [health benefits]{.emcolor} within the [budget]{.emcolor}.
 
-  - Optimize available of resources 
+- Budget constraints
 
-    - Key concept 1: Marginal benefit equals to marginal cost
+- Optimize available of resources 
+
+  - Key concept 1: Marginal benefit equals to marginal cost
   
-    - Key concept 2: The resources used for an individual would results in that the resource could not be used for others
+  - Key concept 2: The resources used for an individual would results in that the resource could not be used for others
+:::
+::::
 
 ---
 
@@ -79,13 +94,13 @@ library(widgetframe)
 
 <iframe width="800" height="400" src="https://www.youtube.com/embed/tPbMJe5xxgE" title="Keytruda, Immunotherapy Drug That Aided Jimmy Carter’s Cancer, ‘A Huge Deal’ | TODAY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Cancer immunotherapy drug Keytruda™ costs [\$150,000 per year]{.themec}
+Cancer immunotherapy drug Keytruda™ costs [\$150,000 per year]{.emcolor}
 
 ---
 
 ## Economic evaluation approaches
 
-<image src="/pic/CEMethods.png" >
+<image src="./pic/CEMethods.png" >
 
 ---
 
@@ -93,37 +108,44 @@ Cancer immunotherapy drug Keytruda™ costs [\$150,000 per year]{.themec}
 
 <iframe width="800" height="400" src="https://www.youtube.com/embed/cUgkWYeRsJk" title="Health Economic Evaluation Basics - Putting a price tag on health -" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-
 ---
 
 ## Type of economic evaluation
 
-- Cost of illness studies
+[Cost of illness studies]{.accent .lead}
 
-  - Purpose: Estimate the economic burden of a diseases or health conditions, expressed disease burden in [monetary terms]{.themec} (what is the economic burden of diabetes in the US? What is the economic burden of Covid-19 in the US? etc.)
+::::{.two-col-grid}
+:::{.grid-item}
 
-  - $\text{Cost of illness}$ = Cost per episode * Number of episodes + cost per admission * number of admissions + loss of productivity per death * deaths
+Purpose: Estimate the economic burden of a diseases or health conditions, expressed disease burden in [monetary terms]{.emcolor} (what is the economic burden of diabetes in the US? What is the economic burden of Covid-19 in the US? etc.)
 
-- Approaches: Convert morbidity and mortality into monetary terms, including
-  - [direct costs]{.themec} (medical costs or non-medical costs)
-  - [indirect costs]{.themec} (productivity loss)
-  - [intangible costs]{.themec} (pain and suffering)
+- $\text{Cost of illness}$ = Cost per episode * Number of episodes + cost per admission * number of admissions + loss of productivity per death * deaths
+:::
+:::{.grid-item}
+
+Approaches: Convert morbidity and mortality into monetary terms, including
+
+- [direct costs]{.emcolor} (medical costs or non-medical costs)
+- [indirect costs]{.emcolor} (productivity loss)
+- [intangible costs]{.emcolor} (pain and suffering)
+:::
+::::
 
 ---
 
-## Example of cost-of-illness of dengue in Puerto Rico [^1]
+## Cost-of-illness of dengue in Puerto Rico [^1]
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
 <center>
 
-<img src = "/pic/S5-F5.png" width = "100%">
+<img src = "./pic/S5-F5.png" width = "100%">
 
 </center>
-
 :::
-:::{.column width="50%"}
+
+:::{.grid-item}
 
 <center>
 
@@ -140,39 +162,78 @@ Cancer immunotherapy drug Keytruda™ costs [\$150,000 per year]{.themec}
 
 ## Cost-benefit analysis (CBA)
 
-- Purpose: Compare the costs and [benefits]{.themec} of an intervention in [monetary]{.themec} terms (e.g., what is the benefit of a new drug in monetary terms? What is the cost of a new drug in monetary terms? etc.)
+::::{.two-col-grid}
+:::{.grid-item}
 
-- Requirement 
-  - Identify the costs and benefits of the intervention in [monetary terms]{.themec}
-  - Calculate the net [benefit]{.themec} (benefit minus cost) or [benefit-cost ratio]{.themec} (benefit divided by cost)
-  - Compare the net benefit or benefit-cost ratio of the intervention with that of alternative interventions
+Purpose: 
+
+- Compare the costs and [benefits]{.emcolor} of an intervention in [monetary]{.emcolor} terms (e.g., what is the benefit of a new drug in monetary terms? What is the cost of a new drug in monetary terms? etc.)
+
+:::
+:::{.grid-item}
+
+Requirement: 
+
+- Identify the costs and benefits of the intervention in [monetary terms]{.emcolor}
+- Calculate the net [benefit]{.emcolor} (benefit minus cost) or [benefit-cost ratio]{.emcolor} (benefit divided by cost)
+- Compare the net benefit or benefit-cost ratio of the intervention with that of alternative interventions
+:::
+::::
 
 ---
 
-## Cost-benefit analysis (CBA) continue...
-- Benefit and the cost can be in the future, and we need to discount the future benefit and cost to present value using a [discount rate]{.themec} (e.g., 3% per year)
+::::{.slide-list}
+:::{.list-header}
+[Cost-benefit analysis]{.kicker}
+
+<div class="rule"></div>
+
+<p class="h2">Cost-benefit analysis (CBA) continue...</p>
+
+Converting future value to present value using a discount rate
+
+:::
+
+:::{.list-body}
+- Benefit and the cost can be in the future, and we need to discount the future benefit and cost to present value using a [discount rate]{.emcolor} (e.g., 3% per year)
 - Present value (PV) of future benefit or cost can be calculated using the following formula:
-- $$PV = \frac{FV}{(1+r)^t}$$ where FV is future value, r is discount rate, and t is time in years
-- Selection of [discount rate]{.themec}
-  - US often uses [3% per year]{.themec} for both costs and benefits
-  - UK often uses [3.5% per year]{.themec} for both costs and benefits
-
+- $PV = \frac{FV}{(1+r)^t}$, where FV is future value, r is discount rate, and t is time in years
+- Selection of [discount rate]{.emcolor}
+  - US often uses [3% per year]{.emcolor} for both costs and benefits
+  - UK often uses [3.5% per year]{.emcolor} for both costs and benefits
+:::
+::::
 ---
 
-## Example of cost-benefit analysis (CBA)
+::::{.slide-list}
+
+:::{.list-header}
+[Example: CBA]{.kicker}
+
+<div class="rule"></div>
+
+<p class="h2">Example of cost-benefit analysis (CBA)</p>
 
 Estimation of the cost benefit of coming to Georgetown University to pursue a bachelor degree vs. working in the US for 4 years after high school graduation.
 
-- Assumptions: 
-  - Tuition and fees: $50,000 per year
-  - Living expenses: $20,000 per year
-  - Opportunity cost of not working: $30,000 per year
-  - Total cost of attending Georgetown University for 4 years: $400,000
-  - Expected salary after graduation: $80,000 per year
-  - Expected salary without a degree: $50,000 per year
-  - Expected salary increase due to degree: 3.5% per year
-  - Time horizon: 40 years (from age 22 to age 62)
-  - Discount rate: 3% per year
+:::
+
+:::{list-body}
+Assumptions
+
+:::{.bullet-list}
+- Tuition and fees: $50,000 per year
+- Living expenses: $20,000 per year
+- Opportunity cost of not working: $30,000 per year
+- Total cost of attending Georgetown University for 4 years: $400,000
+- Expected salary after graduation: $80,000 per year
+- Expected salary without a degree: $50,000 per year
+- Expected salary increase due to degree: 3.5% per year
+- Time horizon: 40 years (from age 22 to age 62)
+- Discount rate: 3% per year
+:::
+:::
+::::
 
 ---
 
@@ -191,52 +252,82 @@ Cost-benefit ratio = $268,003/1,058,746 = 1/3.95 $
 
 ## Cost-effectiveness analysis (CEA) 
 
-### Incremental cost-effectiveness ratio (ICER)
+Incremental cost-effectiveness ratio (ICER)
+
+::::{.two-col-grid}
+:::{.grid-item}
 
 - Numerator: Difference between cost of new drugs and that of alternative under study
 
 - Denominator: Difference of health outcomes (Effectiveness) of new drugs and alternative
 
-$$ICER = \frac{{Cost_{New Drug}}-Cost_{Status Quo}}{Effectiveness_{New Drug}-Effectiveness_{Status Quo}} = \frac{\Delta Cost}{\Delta Effectiveness}$$
+$ICER = \frac{{Cost_{New Drug}}-Cost_{Status Quo}}{Effectiveness_{New Drug}-Effectiveness_{Status Quo}} = \frac{\Delta Cost}{\Delta Effectiveness}$
 
-
+:::
+:::{.grid-item}
 What is the meaning of ICER? 
-
 
 <center>
 
-[Price]{.themec} to pay in order to gain 1 unit increase in the health benefit
+> [Price]{.emcolor} to pay in order to gain 1 unit increase in the health benefit
 
 </center>
+:::
+::::
 
 ---
 
 ## Steps to perform a cost-effectiveness analysis (CEA)
 
-- Define the [perspective]{.themec} of the analysis (e.g., societal, healthcare system, payer, patient)
-- Define the [time horizon]{.themec} of the analysis (e.g., short-term, long-term)
-- Define the [alternative interventions]{.themec} to be compared (e.g., new drug vs. standard treatment)
-- Identify the [costs]{.themec} and [effectiveness]{.themec} of each alternative intervention
-- Calculate the [incremental cost]{.themec} and [incremental effectiveness]{.themec} of the new drug compared to the standard treatment
-- Compare the ICER against the [threshold value]{.themec} 
-- Perform [sensitivity analysis]{.themec} to assess the robustness of the results
+::::{.two-col-grid}
+:::{.grid-item}
+
+- Define the [perspective]{.emcolor} of the analysis (e.g., societal, healthcare system, payer, patient)
+- Define the [time horizon]{.emcolor} of the analysis (e.g., short-term, long-term)
+- Define the [alternative interventions]{.emcolor} to be compared (e.g., new drug vs. standard treatment)
+- Identify the [costs]{.emcolor} and [effectiveness]{.emcolor} of each alternative intervention
+:::
+:::{.grid-item}
+- Calculate the [incremental cost]{.emcolor} and [incremental effectiveness]{.emcolor} of the new drug compared to the standard treatment
+- Compare the ICER against the [threshold value]{.emcolor} 
+- Perform [sensitivity analysis]{.emcolor} to assess the robustness of the results
+:::
+::::
 
 ---
 
 ## Define perspectives of study
 
-- [Societal perspective]{.themec}: Include all costs and benefits, regardless of who incurs the costs or receives the benefits
+::::{.three-col-grid}
+:::{.grid-item}
 
-- [Healthcare system perspective]{.themec}: Include only costs and benefits that are relevant to the healthcare system (e.g., costs of drugs, hospitalizations, and medical procedures)
+[Societal perspective]{.emcolor}
 
-- [Payer perspective]{.themec}: Include only costs and benefits that are relevant to the payer (e.g., insurance company, government)
+Include all costs and benefits, regardless of who incurs the costs or receives the benefits
+
+:::
+:::{.grid-item}
+
+[Healthcare system perspective]{.emcolor}
+
+Include only costs and benefits that are relevant to the healthcare system (e.g., costs of drugs, hospitalizations, and medical procedures)
+:::
+:::{.grid-item}
+
+[Payer perspective]{.emcolor}
+
+Include only costs and benefits that are relevant to the payer (e.g., insurance company, government)
+:::
+::::
 
 ---
 
 ## Examine the costs
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
+
+Components of costs
 
 - Cost of intervention 
 
@@ -245,9 +336,10 @@ What is the meaning of ICER?
 - cost of side effects
 
 :::
-:::{.column width="50%"}
+:::{.grid-item}
 
-### Type of costs 
+Type of costs 
+
 - Direct costs: medical costs (e.g., drugs, hospitalizations, medical procedures) and non-medical costs (e.g., transportation, caregiver time)
 - Indirect costs: productivity loss (e.g., lost wages, lost productivity due to illness or death)
 :::
@@ -259,20 +351,20 @@ What is the meaning of ICER?
 
 ## Effectiveness measures 
 
-:::: columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
 - Common measures of health consequences
-   - [Health outcomes]{.themec}
+   - [Health outcomes]{.emcolor}
         - Mortality (death rate) or morbidity (e.g. incidence, prevalence) or disability (Quality of life)
-  - [Intermediate health outcomes]{.themec}
+  - [Intermediate health outcomes]{.emcolor}
       - Changes in the risk of ill-health (e.g. smoking, drinking, blood pressure reduction)   
-  - [Process measure]{.themec} (e.g. hospital stay) 
-  - [Composite measures]{.themec}
+  - [Process measure]{.emcolor} (e.g. hospital stay) 
+  - [Composite measures]{.emcolor}
       - Quality adjusted life years (QALYs)
       - Disability adjusted life years (DALYs)
 :::
-:::{.column width="50%"}
+:::{.grid-item}
 - Fatal cases 
   - Life years saved (LYs)
 - Non-fatal cases
@@ -286,16 +378,16 @@ What is the meaning of ICER?
 
 ## Survival measures 
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
 - Life years saved (LYs)
 - Survival rate
 
-<img src = "/pic/S5-Survival.png" width = "100%">
+<img src = "./pic/S5-Survival.png" width = "100%">
 
 :::
-:::{.column width="50%"}
+:::{.grid-item}
 
 - LYs gains
   - (ABC) = 1/2(0.90 − 0.77) × 1.5 = 0.0975 years
@@ -309,21 +401,21 @@ What is the meaning of ICER?
 
 ## Quality-adjusted life years (QALYs)
 
-:::: columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
 Some interventions may have a combination of multiple impact 
 
-1. Improve the [duration]{.themec} of survival (mortality)
+1. Improve the [duration]{.emcolor} of survival (mortality)
 
-2. Reduce the [risk of diseases]{.themec} (morbidity)
+2. Reduce the [risk of diseases]{.emcolor} (morbidity)
 
-3. Improve the [quality of life]{.themec} during the illness (quality of life) 
+3. Improve the [quality of life]{.emcolor} during the illness (quality of life) 
 
 :::
-:::{.column width="50%"}
+:::{.grid-item}
 
-<img src="/pic/s5-QALYs.png" width= "100%">
+<img src="./pic/s5-QALYs.png" width= "100%">
 
 :::
 ::::
@@ -336,35 +428,57 @@ Some interventions may have a combination of multiple impact
 
 ---
 
-## Quality-adjusted life **years** (QALYs)
+## Quality-adjusted life years (QALYs)
 
-$$QALY = Q*LYs$$ where Q is [Quality of Life]{.themec} and LY is [Life **Years**]{.themec}
+::::{.two-col-grid}
+:::{.grid-item}
 
-$$\Delta QALYs = Q_{n}*LYs_{n} - Q_{s}*LYs_{s}$$ where `n` means new drugs and `s` standard treatment
+$QALY = Q*LYs$, where Q is [Quality of Life]{.emcolor} and LY is [Life **Years**]{.emcolor}
 
-A typical TB patient with has an average quality of life of [0.8]{.themec} during the
-illness, and the TB symptoms last [6 months]{.themec} until the patient is fully
-recovered.
+$\Delta QALYs = Q_{n}*LYs_{n} - Q_{s}*LYs_{s}$
+
+where `n` means new drugs and `s` standard treatment
+
+:::
+:::{.grid-item}
+
+> A typical TB patient with has an average quality of life of [0.8]{.emcolor} during the illness, and the TB symptoms last [6 months]{.emcolor} until the patient is fully recovered.
 
 - How many QALYs does the patient live during the illness?
 
 - How many QALYs saved per case if TB vaccine could avert the TB?
+:::
+::::
 
 ---
 
-## Calcuation 
+::::{.slide-list}
+:::{.list-header}
+[Calculation]{.kicker}
 
-$$QALY_s = Q_s*LYs_s = 0.8*\frac{6}{12} = 0.8*0.5= 0.4$$
-$$\Delta QALYs = Q_{n}*LYs_{n} - Q_{s}*LYs_{s}$$
-$$Q_{n}*LYs_{n} = 1*\frac{6}{12}=1*0.5=0.5$$
-$$\Delta QALYs = 0.5-0.4=0.1$$
+<div class="rule"></div>
+
+<p class="h2">Calculation of QALYs</p>
+
+:::
+:::{second-column}
+
+$QALY_s = Q_s*LYs_s = 0.8*\frac{6}{12} = 0.8*0.5= 0.4$
+
+$\Delta QALYs = Q_{n}*LYs_{n} - Q_{s}*LYs_{s}$
+
+$Q_{n}*LYs_{n} = 1*\frac{6}{12}=1*0.5=0.5$
+
+$\Delta QALYs = 0.5-0.4=0.1$
+:::
+::::
 
 ---
 
 ## Quality of life measures 
 
-:::: columns 
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 - Quality-adjusted life years (QALYs)
 - 0 = death, 1 = perfect health
 - Utility score can be measured using different methods, including
@@ -374,19 +488,17 @@ $$\Delta QALYs = 0.5-0.4=0.1$$
   - Standard gamble (SG)
 :::
 
-:::{.column width="50%"} 
+:::{.grid-item} 
 
 :::{.panel-tabset}
 
 ### EQ-5D
 
-<img src="/pic/f13.2.png" width="70%">
-
-
+<img src="./pic/f13.2.png" width="70%">
 
 ### Visual analog
 
-<img src="/pic/f13.3.jpg" width="70%">
+<img src="./pic/f13.3.jpg" width="70%">
 
 ### Time trade-off
 
@@ -408,7 +520,7 @@ Utility value of one year in chronic health state is x/t
 
 ## Time trade-off example 
 
-A person with chronic pain would live for another 10 years. He/she will be indifferent between living for 10 years with chronic pain and living for 6 years with perfect health. What is his/her quality of life? 
+> A person with chronic pain would live for another 10 years. He/she will be indifferent between living for 10 years with chronic pain and living for 6 years with perfect health. What is his/her quality of life? 
 
 $$6/10 = 0.6$$
 
@@ -416,10 +528,10 @@ $$6/10 = 0.6$$
 
 ## Standard gambling approach 
 
-:::: columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
-The Choice: You're presented with two options.
+You're presented with two options:
 
 - Option A (Certainty): Live with a specific health problem (e.g., severe pain) for the rest of your life.
 
@@ -428,8 +540,10 @@ The Choice: You're presented with two options.
 Finding Indifference: The probability p is adjusted until you're equally happy with Option A as with Option B (you're indifferent).
 
 Calculating Utility: This indifference point helps calculate a utility score (U) for that health state, often using the formula: $U = p \times 1 + (1-p) \times 0$, where 1 is perfect health and 0 is death.
+
 :::
-:::{.column width="50%"}
+:::{.grid-item}
+
 
 ```{r include=TRUE, echo=FALSE}
 m <-grViz("
@@ -462,22 +576,22 @@ frameWidget(m)
 
 ## Estimation Incremental Cost-effectiveness Ratio (ICER)
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
 $$ICER = \frac{\Delta Cost}{\Delta QALYs}$$
 
-Interpretation: The ICER is the [price]{.themec} to pay in order to gain 1 unit increase in the health benefit (e.g., 1 QALY).
+Interpretation: The ICER is the [price]{.emcolor} to pay in order to gain 1 unit increase in the health benefit (e.g., 1 QALY).
 
 if ICER is $800 per QALY, is it cost effective in US?
 
 What about in Afghanistan? 
 :::
-:::{.column width="50%"}
+:::{.grid-item}
 
 <center> 
 
-<img src="/pic/S5-ICER.png" width = "600px">
+<img src="./pic/S5-ICER.png" width = "600px">
 
 </center>
 
@@ -490,7 +604,7 @@ What about in Afghanistan?
 
 <center> 
 
-<img src="/pic/S5-ICER2.png" width = "800px">
+<img src="./pic/S5-ICER2.png" width = "800px">
 
 </center>
 
@@ -498,20 +612,19 @@ What about in Afghanistan?
 
 ## An hypothetical example 
 
+> A dengue vaccine cost [\$20]{.emcolor} per dose. Full vaccination a child under 9 years old requires 3 doses. The efficiency of the dengue vaccine was estimated to be [60%]{.emcolor}. The [QALYs loss]{.emcolor} per dengue infection, on average was estimated to be [0.035]{.emcolor}. 
 
-A dengue vaccine cost [\$20]{.themec} per dose. Full vaccination a child under 9 years old requires 3 doses. The efficiency of the dengue vaccine was estimated to be [60%]{.themec}. The [QALYs loss]{.themec} per dengue infection, on average was estimated to be [0.035]{.themec}. 
-
-The [incidence]{.themec} of dengue in the country was estimated to be [2%]{.themec} among children under 9. Assuming that the treatment cost per dengue case is, on average, [\$200 per infection]{.themec}. What is the incremental cost-effectiveness ratio (ICER) of the dengue vaccine. 
+> The [incidence]{.emcolor} of dengue in the country was estimated to be [2%]{.emcolor} among children under 9. Assuming that the treatment cost per dengue case is, on average, [\$200 per infection]{.emcolor}. What is the incremental cost-effectiveness ratio (ICER) of the dengue vaccine. 
 
 ---
 
 ## Calculation
 
-$$\Delta Cost \text{ per person} = (20*3 + 100*0.02*0.4) - (0 + 100*0.02) = 58.8$$
+$\Delta Cost \text{ per person} = (20*3 + 100*0.02*0.4) - (0 + 100*0.02) = 58.8$
 
-$$\Delta QALY \text{ per person} = 2\%*0.035*0.6 = 0.00042$$
+$\Delta QALY \text{ per person} = 2\%*0.035*0.6 = 0.00042$
 
-$$ICER = \frac{58.8}{0.00042} = 140,000$$
+$ICER = \frac{58.8}{0.00042} = 140,000$
 
 What does this number tell us? Is it worthwhile to deploy the vaccine to control dengue?
 
@@ -519,25 +632,24 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
 
 ## Compare ICER with threshold value
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
 <center>
 
-<img src = "/pic/S5-DRULES.png" width = "600px">
+<img src = "./pic/S5-DRULES.png" width = "600px">
 
 </center>
 :::
-:::{.column width="50%"}
-- Threshold value: The maximum amount of money that a society is willing to pay for a unit of health benefit (e.g., 1 QALY)
+:::{.grid-item}
 
+- Threshold value: The maximum amount of money that a society is willing to pay for a unit of health benefit (e.g., 1 QALY)
   - Willness to pay (WTP) threshold value is often used as a benchmark to determine whether an intervention is cost-effective or not.
   - GDP per capita is often used as a proxy for WTP threshold value.
   - WHO Suggests 
     - < 1x GDP per capita: Highly cost-effective
     - 1-3x GDP per capita: Cost-effective
   - I use 1.5 x GDP per capita as the threshold value for my studies
-
 :::
 ::::
 
@@ -546,19 +658,24 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
 
 ## Sensitivity analysis
 
+::::{.two-col-grid}
+:::{.grid-item}
 - Sensitivity analysis is a method to assess the robustness of the results of a cost-effectiveness analysis (CEA) by varying the key parameters of the model (e.g., costs, effectiveness, discount rate, etc.) and examining how the results change.
-
+:::
+:::{.grid-item}
 - Types of sensitivity analysis
   - One-way sensitivity analysis: Vary one parameter at a time and examine the impact on the results.
   - Multi-way sensitivity analysis: Vary multiple parameters at the same time and examine the impact on the results.
   - Probabilistic sensitivity analysis: Use probability distributions to model the uncertainty of the parameters and examine the impact on the results.
+:::
+::::
 
 ---
 
 ## Decision tree model
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
 - Suitable for short-term and non-repeated health outcomes
 - Requirement 
@@ -566,9 +683,9 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
   - Identify the probabilities of each health outcome and the cost and effectiveness associated with each outcome
 - Calculate the expected cost and effectiveness of each alternative intervention
 :::
-:::{.column width="50%"}
+:::{.grid-item}
 
-<img src ="/pic/S5-DT.png" width = "100%">
+<img src ="./pic/S5-DT.png" width = "100%">
 
 :::
 ::::
@@ -577,27 +694,27 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
 
 ## Example of decision tree model 
 
-### Decision tree for CHW program (Effectiveness)
+Decision tree for CHW program (Effectiveness)
 
-<img src ="/pic/S5-CHW1.png" width = "100%">
+<img src ="./pic/S5-CHW1.png" width = "100%">
 
 ---
 
 ## Decision tree for CHW program (Cost)
 
-<img src ="/pic/S5-CHW2.png" width = "100%">
+<img src ="./pic/S5-CHW2.png" width = "100%">
 
 ---
 
 ## Average out & fold back
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
-<img src ="/pic/S5-CHW3.png" width = "100%">
+<img src ="./pic/S5-CHW3.png" width = "100%">
 
 :::
-:::{.column width="50%"}
+:::{.grid-item}
 
 - The net cost per pregnant woman is
   - $106.71 − $65.80 = $40.91
@@ -608,14 +725,12 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
 :::
 ::::
 
-
-
 ---
 
 ## Markov model 
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
 
 - Suitable for long-term (chronic diseases) and repeated health outcomes (infectious diseases)
 - Requirement 
@@ -625,9 +740,9 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
   - Attach the cost and effectiveness (utility) associated with each state
 
 :::
-:::{.column width="50%"}
+:::{.grid-item}
 
-<img src ="/pic/S5-Markov.png" width = "100%">
+<img src ="./pic/S5-Markov.png" width = "100%">
 
 :::
 ::::
@@ -636,10 +751,10 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
 
 ## Issues of using CEA 
 
-### What are the major issues in using CEA to value phmarceutical innovations
+::::{.two-col-grid}
+:::{.grid-item}
 
-::::columns
-:::{.column width="50%"}
+Major issues in using CEA to value phmarceutical innovations
 
 - Ethical issue
 
@@ -654,17 +769,23 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
   - How to compare cost and effectiveness 
 
 :::
-:::{.column width="50%"}
+:::{.grid-item}
+<center>
 
+<img src ="./pic/S5-EE-tradeoff.png" width = "100%">
+
+</center>
 :::
 ::::
 
 ---
 
-## Summary 
+## Summary
 
-::::columns
-:::{.column width="50%"}
+::::{.two-col-grid}
+:::{.grid-item}
+
+:::{.bullet-list}
 
 - CEA has been widely used for valuing pharmaceutical innovation 
 
@@ -672,9 +793,19 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
 
 - There are many new developments in addressing the technical issues of CEA
 
-- CEA is [NOT]{.themec} the only criterion for valuing pharmaceutical innovation
+- CEA is [NOT]{.emcolor} the only criterion for valuing pharmaceutical innovation
 :::
-:::{.column width="50%"}
+:::
+:::{.grid-item}
+
+<center>
+
+> "CEA is not the only and ultimate evaluation tool!"
+
+</center>
+<img src ="./pic/Zeng-sketch.png" width = "20%" align ="right">
+
+
 
 
 :::
