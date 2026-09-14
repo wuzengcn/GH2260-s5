@@ -149,7 +149,7 @@ Approaches: Convert morbidity and mortality into monetary terms, including
 
 <center>
 
-<img src = "/pic/S5-F6.png" width = "100%">
+<img src = "./pic/S5-F6.png" width = "100%">
 
 </center>
 
