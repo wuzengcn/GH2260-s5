@@ -415,7 +415,7 @@ Some interventions may have a combination of multiple impact
 :::
 :::{.grid-item}
 
-<img src="./pic/s5-QALYs.png" width= "100%">
+<img src="./pic/S5-QALYs.png" width= "100%">
 
 :::
 ::::
