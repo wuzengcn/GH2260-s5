@@ -494,11 +494,11 @@ $\Delta QALYs = 0.5-0.4=0.1$
 
 ### EQ-5D
 
-<img src="./pic/f13.2.png" width="70%">
+<img src="./pic/F13.2.png" width="70%">
 
 ### Visual analog
 
-<img src="./pic/f13.3.jpg" width="70%">
+<img src="./pic/F13.3.jpg" width="70%">
 
 ### Time trade-off
 
