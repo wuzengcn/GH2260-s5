@@ -637,7 +637,7 @@ What does this number tell us? Is it worthwhile to deploy the vaccine to control
 
 <center>
 
-<img src = "./pic/S5-DRULES.png" width = "600px">
+<img src = "./pic/S5-Drules.png" width = "600px">
 
 </center>
 :::
